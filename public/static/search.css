@@ -1,0 +1,41 @@
+table{
+    border: 1px solid
+
+}
+
+pre{
+    white-space: pre-wrap;
+}
+
+table tr:not(.header) {
+    counter-increment: rowNumber;
+}
+
+
+table tr:not(.header) td:first-child pre::before {
+    content: counter(rowNumber);
+    min-width: 2em;
+    margin-right: 0.5em;
+    display: inline-block;
+    border-right: 2px solid white;
+}
+
+table tr td:first-child{
+    max-width: 25vw;
+    min-width: 25vw;
+}
+
+table td{
+    background: #e5edff;
+    padding: 3px 5px;
+    max-width: 40vw;
+}
+
+table th{
+    background: #8c929f;
+    padding: 3px 5px;
+}
+
+tr.correct td {
+    background: rgb(216, 246, 170)!important
+}

@@ -1,0 +1,8 @@
+transformers
+sentencepiece
+websockets
+--index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+torchaudio 
+tiktoken

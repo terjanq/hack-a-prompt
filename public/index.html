@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>(GPT) Hackaprompt</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class=title>
+        <h1>Hack a prompt playground</h1>
+    </div>
+    <div class="link-bar">
+        <a href="upload.php" target="_blank">Update submissions.json</a>
+        <a href="flan/">Flan</a>
+        <a href="/search.html" target="_blank">Search submissions</a>
+        <a href="https://tiktokenizer.vercel.app/" target="_blank">Tokenizer</a>
+        <a href="/data/tokens.json" target="_blank">tokens</a>
+        <a href="https://www.aicrowd.com/challenges/hackaprompt-2023/leaderboards"  target="_blank">Leaderboard</a>
+        <!-- <a href="https://docs.google.com/spreadsheets/d/1tVmmB_tJhWBF5oqUwOqgCmuuPhOWqDlMGmZm1FXbQ0Y/edit#gid=0" target="_blank">Spreadsheet</a> -->
+        <a href="https://docs.google.com/spreadsheets/d/1ZT-Vf5otmEhKu0t44ZdVkQ7zPdH036O9Lq8RcBb0_y0/edit#gid=0" target="_blank">Spreadsheet</a>
+        <a href="https://huggingface.co/spaces/jerpint-org/hackaprompt" target="_blank">Playground</a>
+        <a href="/data/submissions.json" target="_blank">submissions.json</a>
+        <a href="/static/hackaprompt.user.js" target="_blank">Userscript</a>
+        <a href="https://github.com/terjanq/hack-a-prompt" target="_blank">Repo</a>
+    </div>
+    <div class="option-bar">
+        <div class="option">
+            <h4 class="label">Level</h4>
+            <select class="value" id="level"></select>
+        </div>
+        <div class="option">
+            <h4 class="label">API key</h4>
+            <input class="value" id="apikey" placeholder="sk-CjlzFOt5Xp8i6ZQxb378hSbNBRXTBv3sKIBG9wQS">
+        </div>
+        <div class="option">
+            <h4 class="label">Runs</h4>
+            <input class="value" id=runs type="number" value=1>
+        </div>
+        <div class="option">
+            <h4 class="label">Expected</h4>
+            <input class="value" id="expected" readonly>
+        </div>
+        <div class="option">
+            <h4 class="label">Translation API</h4>
+            <input class="value" id="trasnlateApi" type="checkbox">
+        </div>
+        <div class="option">
+            <h4 class="label">Replace banned chars</h4>
+            <input class="value" id="replaceBanned" type="checkbox" checked>
+        </div>
+        <div class="option">
+            <h4 class="label">Replace all ASCII</h4>
+            <input class="value" id="replaceAll" type="checkbox">
+        </div>
+    </div>
+    <main>
+        <div class="input-box">
+            <textarea id=input></textarea>
+            <div class="input-actions">
+                <button id=run>Run</button>
+                <button id=runPadded>Run Padded</button>
+                <button id="runFlan" class="hidden">Run Flan</button>
+                <button id=run66 class="hidden">Run(66)</button>
+                <button id="reset">Reset</button>
+                <button id=save>Save locally</button>
+                <button id=remove disabled>Remove locally</button>
+                <button id=generate>Generate submission.json</button>
+                <button id=submit>Submit</button>
+                <button id="clearOutput">Clear output</button>
+                <button id="clearHistory">Clear history</button>
+                <button onclick="emojiPicker.classList.toggle('not-visible');emojiPicker.contentWindow.focus()">Toggle 😀😈😍</button>
+
+                <select class="value" id="revision"></select>
+            </div>
+            <div>
+                Tokens: <input id="tokens" type="number" readonly>
+            </div>
+            <div>
+                Cost: <input id="ptokens" readonly>
+            </div>
+            <pre id="historyOutput"></pre>
+            <pre id="template"></pre>
+        </div>
+        <div class="output-box">
+            <pre id=output></pre>
+            <details>
+                <summary>History</summary>
+                <pre id="history"></pre>
+            </details>
+        </div>
+    </main>
+    <script src="/config.js"></script>
+    <script src="/static/utils.js"></script>
+    <iframe id="emojiPicker" src="/static/emojis.html" class="not-visible"></iframe>
+    <script src="/static/levels.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
