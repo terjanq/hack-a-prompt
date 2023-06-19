@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shared History Search</title>
+        <link rel="stylesheet" href="/static/search.css">
+    </head>
+    <body>
+        <form>
+            <select name="model">
+                <option value="flan" selected>Flan</option>
+                <option value="gpt">GPT</option>
+            </select> 
+            <select name="level">
+                <option value="-1" selected>Any</option>
+            </select> 
+            Negate regex: <input type="checkbox" name="negate"> 
+            Search Type: <select name="searchType">
+                <option value="completion" selectede>Completions</option>
+                <option value="prompt">Prompt</option>
+            </select>
+            <input type=button name=refresh value="Refresh" onclick="refreshData()">
+            <br>
+            /<input name="regex" placeholder="^I have been PWNED$" value="^I have been PWNED$" style="width:60vw">
+            /<input name="regexFlags" placeholder="gim" value="" style="width:50px">
+            <input type="button" value="share" onclick="copyLink(this)">
+        </form>
+        
+        <table id="output">
+            <tr>
+                <td>completion</td>
+                <td>prompt</td>
+                <td>tokens</td>
+                <td>level</td>
+            </tr>
+        </table>
+        
+        
+        <script src="/static/search.js"></script>
+    </body>
+</html>

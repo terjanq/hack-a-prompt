@@ -1,0 +1,279 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #14171a;
+    background: #dbdcdf;
+    font-family: sans-serif;
+}
+
+#input {
+    height: 150px;
+    align-self: stretch;
+}
+
+#output {
+    width: 100%;
+    min-height: 200px;
+    white-space: pre-wrap;
+}
+
+#convert {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: .6;
+    cursor: pointer
+}
+
+textarea {
+    padding: 10px
+}
+
+button {
+    height: 30px
+}
+
+#eval {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    opacity: .6;
+    cursor: pointer
+}
+
+#length {
+    position: absolute;
+    top: 85px;
+    right: 15px;
+    opacity: .6;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+table {
+    width: 100%;
+    height: calc(100vh - 300px)
+}
+
+table td {
+    position: relative;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.title {
+    background: #6c86e6;
+    color: white;
+}
+
+.title.flan{
+    background: #8b606b;
+}
+.dark .title {
+    background: #222;
+}
+
+.title h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 24px 0;
+}
+
+.title h1,
+.title p {
+    text-align: center
+}
+
+.title p {
+    font-style: italic;
+    font-size: 20px
+}
+
+#apikey{
+    width: 400px;
+}
+
+#template{
+    white-space: pre-wrap;
+}
+
+#expected{
+    width: 400px;
+}
+
+tr td:first-child{
+    width: 25%
+}
+
+p.msg{
+    background: white;
+    padding: 5px;
+}
+
+.output-ok {
+    color: green;
+}
+.output-bad {
+    color: red;
+}
+
+.link-bar {
+    padding: 8px;
+    
+}
+
+.link-bar a{
+    margin-right: 10px;
+    font-size: large
+}
+
+.option-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px;
+}
+
+.option-bar .option {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.option-bar .label {
+    padding: 0;
+    margin: 0;
+}
+.option-bar .value {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin: 8px;
+    margin-top: 24px;
+}
+main > .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    flex-grow: 1;
+    gap: 8px;
+}
+main > .output-box {
+    width: 0;
+    flex-grow: 1;
+}
+
+:root {
+    --background-accented: #f2f3f5;
+    --accent-color: #0098c0;
+}
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+input, textarea, select {
+    color: #111;
+    background: var(--background-accented);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+}
+button {
+    color: #111;
+    background: #f2f4f7;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+}
+input:focus, textarea:focus, select:focus {
+    border: 1px solid var(--accent-color);
+}
+button:hover {
+    background: #e6ebf0;
+/*    border: 1px solid var(--accent-color);*/
+}
+button:disabled, button:disabled:hover {
+    background: #cdd0d1;
+    color: #888;
+}
+
+.dark {
+    /*--background-accented: #1f2a40;*/
+    --background-accented: #111;
+    --background-content: #17212f;
+    --text-color: #fff;
+    --accent-color: #0098c0;
+    --hover-color: #82e5ff;
+}
+.dark body {
+    background: #000;
+    color: white;
+}
+.dark a {
+    color: var(--text-color);
+}
+.dark .output-ok {
+    color: #29ff5e;
+}
+.dark .output-bad {
+    color: #ff297b;
+}
+.dark input, .dark textarea, .dark select {
+    color: white;
+    border: 1px solid #005a75;
+}
+.dark button {
+    color: white;
+    background: var(--background-accented);
+    border: 1px solid #005a75;
+}
+.dark p.msg {
+    background: #111;
+}
+
+.not-visible{
+    visibility: hidden;
+}
+
+.hidden{
+    display: none
+}
+
+input.value[type="checkbox"]{
+    height: 20px;
+}
+
+.pending{
+    opacity: 0.3;
+}
+
+.inHistory{
+    background: rgb(255, 191, 200);
+}
+
+.inHistory.good{
+    background: rgb(210 236 210);
+}
+
+pre{
+    white-space: pre-wrap
+}
+#emojiPicker{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 90vh;
+    margin-top: 5vh;
+    z-index: 2000;
+    opacity: 0.8;
+}
