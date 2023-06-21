@@ -1,6 +1,6 @@
 # HackAPrompt 2023
 
-This repo contains tooling and prompts that we've developed for the [HackAPrompt 2023](https://www.aicrowd.com/challenges/hackaprompt-2023) competition.
+This repo contains tooling and prompts that we've developed for the [HackAPrompt 2023](https://www.aicrowd.com/challenges/hackaprompt-2023) competition. To see our prompt engineering strategies, see [STRATEGY.md](./STRATEGY.md)
 
 ## Competition highlights 
 * Placed TOP2 in the [All Models](https://www.aicrowd.com/challenges/hackaprompt-2023/leaderboards) scoreboard
